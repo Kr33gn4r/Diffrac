@@ -1,0 +1,196 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Inherit from the body */
+}
+
+.app-container {
+    max-width: 1200px; /* Constrain the app width */
+    width: 100%; /* Full width up to max-width */
+    margin: 0 auto; /* Center the app */
+    padding: 0 10px; /* Optional padding */
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Error message */
+.error.hidden{
+    display: none; /* Default hidden */
+}
+
+.error.visible{
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: visible;
+    color: #842029;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+}
+
+/* Parameter fields */
+.parameters-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside the container */
+}
+
+.parameter-row {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure all fields are in a single row */
+    justify-content: center; /* Center the row */
+    align-items: center; /* Vertically align content */
+    gap: 20px; /* Add spacing between fields */
+}
+
+.input-field {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.input-field[type="number"] {
+    width: 80px;
+}
+
+.input-field.function-input {
+    width: 300px;
+}
+
+/* Buttons */
+.button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0056b3;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #004085;
+}
+
+/* Centering flex rows */
+.calculation-mod-container,
+.import-export-container,
+.calculation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    gap: 10px;
+    margin-top: 10px;
+    flex-flow: row nowrap;
+}
+
+.calculations-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    gap: 10px;
+    margin-top: 10px;
+    flex-flow: column nowrap;
+}
+
+/* Graph container */
+.plot-graph {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Use 90% of the containing block's width */
+    max-width: 1200px; /* Optional max width for larger screens */
+    height: 90%;
+    max-height: 1200px;
+    margin: 20px auto; /* Center horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plot-options-container,
+.plot-point-option{
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 10px; /* Add spacing between rows */
+    align-items: center; /* Center rows horizontally */
+    margin: 20px 0; /* Add vertical margin */
+}
+
+.plot-option-row,
+.plot-point-row{
+    display: flex;
+    flex-direction: row; /* Arrange items in a row */
+    align-items: center; /* Align items vertically in the center */
+    gap: 10px; /* Add spacing between items in the row */
+    width: 100%; /* Ensure the row spans the full container width */
+    justify-content: space-between; /* Distribute items evenly with spacing */
+}
+/* Labels and dropdowns */
+.plot-label,
+.calculation-row label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.dropdown {
+    width: 150px;
+    margin: 5px 0;
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 1920px, max-height: 1920px) {
+    .parameter-row,
+    .plot-option-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-field,
+    .dropdown {
+        width: 100%;
+    }
+
+
+
+/* Visible Error */
+.visible {
+    display: block;
+}
+
+

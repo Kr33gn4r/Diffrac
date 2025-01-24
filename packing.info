@@ -1,0 +1,1 @@
+pyinstaller --onefile --add-data "assets/styles.css:assets" --add-data "functions/FODE_PECE.py:functions" --add-data ".venv/lib/python3.13/site-packages/dash_daq/package-info.json:dash_daq" --add-data ".venv/lib/python3.13/site-packages/dash_daq/metadata.json:dash_daq" --add-data ".venv/lib/python3.13/site-packages/dash_daq/dash_daq.min.js:dash_daq" app.py
