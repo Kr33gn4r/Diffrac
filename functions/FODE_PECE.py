@@ -223,7 +223,7 @@ def equation_starting_terms(t, t0, y0, integer_alpha, integer_alpha_factorial):
     st = np.zeros((len(y0) + 1, 1))
     for k in range(1, np.max(integer_alpha) + 1):
         if len(integer_alpha) == 2:
-            st += (t-t0) ** (k-1) * y0[:, k-1] / integer_alpha_factorial[1, k]
+            st += (t-t0) ** (k-1) * y0[:, k-1] / integer_alpha_factorial[k, 1]
         else:
             index_alpha = np.where(k <= integer_alpha)[0]
             st[index_alpha,0] += (t-t0) ** (k-1) * y0[index_alpha - 1, k - 1] / integer_alpha_factorial[k, index_alpha]
